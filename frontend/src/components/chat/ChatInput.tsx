@@ -81,10 +81,10 @@ export function ChatInput() {
   const handleSend = async () => {
     const text = value.trim();
     if (!text || isGenerating) return;
-    await sendMessage(text, attachments.length ? attachments : undefined);
     setValue("");
     setAttachments([]);
     setIsExpanded(false);
+    await sendMessage(text, attachments.length ? attachments : undefined);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
