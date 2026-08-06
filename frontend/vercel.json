@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/chat", "destination": "https://shadai-69d5.onrender.com/chat" }
+  ]
+}
