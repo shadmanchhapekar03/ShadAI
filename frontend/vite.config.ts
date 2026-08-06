@@ -38,7 +38,7 @@ export default defineConfig(async () => {
         },
       },
     },
-  build: {
+    build: {
     rollupOptions: {
       output: {
         manualChunks: {
@@ -50,4 +50,5 @@ export default defineConfig(async () => {
       },
     },
   },
+  };
 });
