@@ -29,7 +29,7 @@ def default():
 
 @app.post("/chat")
 def chat(request: ChatRequest):
-    resume_text = ShadAI.read_pdf(Path("Shadman_Chhapekar_Resume.pdf"))
+    resume_text = ShadAI.read_pdf(Path("Shadman_Chhapekar_Resume_AI_Engineer_.pdf"))
     resume = ShadAI.parse_resume(resume_text)
     answer = ShadAI.ask_candidate(request.question,resume)
     return {
