@@ -1,4 +1,4 @@
-from openai import OpenAI
+from groq import Groq
 from pydantic import BaseModel, field_validator
 from pypdf import PdfReader
 from dotenv import load_dotenv
@@ -10,8 +10,7 @@ load_dotenv()
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
-client = OpenAI(
-    base_url="https://api.groq.com/openai/v1",
+client = Groq(
     api_key=GROQ_API_KEY
 )
 
